@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flash USDT — TRC-20 и BEP-20</title>
+<style>
+  :root { --bg:#0b0f16; --card:#141a24; --line:#222c3a; --ac:#2fe3a0; --tx:#e8eef7; --mut:#8b9aae; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--tx); font:16px/1.55 -apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:960px; margin:0 auto; padding:28px 18px 60px; }
+  header { display:flex; align-items:center; gap:10px; padding-bottom:18px; border-bottom:1px solid var(--line); }
+  .dot { width:10px; height:10px; border-radius:50%; background:var(--ac); box-shadow:0 0 18px var(--ac); }
+  .brand { font-weight:700; letter-spacing:.5px; }
+  .tag { margin-left:auto; font-size:12px; color:var(--mut); border:1px solid var(--line); padding:4px 10px; border-radius:999px; }
+  h1 { font-size:34px; line-height:1.15; margin:34px 0 10px; letter-spacing:-.5px; }
+  h1 span { color:var(--ac); }
+  .lead { color:var(--mut); max-width:640px; }
+  .warn { margin:22px 0 0; padding:14px 16px; border-left:3px solid #f0a742; background:#1a1408; color:#e8d3b0; border-radius:0 8px 8px 0; font-size:14px; }
+  h2 { margin:38px 0 14px; font-size:20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .card .amt { font-size:26px; font-weight:700; }
+  .card .amt small { font-size:13px; color:var(--mut); font-weight:500; }
+  .card .price { color:var(--ac); font-weight:700; margin-top:6px; }
+  .card ul { margin:12px 0 0; padding-left:16px; color:var(--mut); font-size:13px; }
+  .card ul li { margin-bottom:4px; }
+  .net { display:inline-block; font-size:11px; border:1px solid var(--line); color:var(--mut); border-radius:6px; padding:2px 7px; margin-bottom:10px; }
+  .row { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:10px; }
+  .row b { display:block; margin-bottom:2px; }
+  .row span { color:var(--mut); font-size:14px; }
+  code { background:#0a1119; border:1px solid var(--line); padding:2px 7px; border-radius:6px; font-size:13px; word-break:break-all; }
+  ol { color:var(--mut); padding-left:18px; }
+  ol li { margin-bottom:8px; }
+  footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line); color:var(--mut); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="dot"></div>
+  <div class="brand">FLASH USDT</div>
+  <div class="tag">TRC-20 · BEP-20</div>
+</header>
+
+<h1>USDT для показа<br><span>за копейки</span></h1>
+<p class="lead">Готовый токен с видом USDT в вашем кошельке: баланс, иконка и курс в долларах. Для скринов, портфолио, тестов и переписки. Выдача сразу после оплаты.</p>
+
+<div class="warn">Это не настоящий USDT от Tether. Им нельзя платить на бирже, но в кошельке он выглядит и ведёт себя как обычный токен: приходит, переводится, показывает сумму.</div>
+
+<h2>Пакеты</h2>
+<div class="grid">
+  <div class="card">
+    <span class="net">TRC-20 · TRON</span>
+    <div class="amt">500 <small>USDT</small></div>
+    <div class="price">$3</div>
+    <ul><li>автопоявление в кошельке</li><li>иконка в течение суток</li><li>выдача 5–15 минут</li></ul>
+  </div>
+  <div class="card">
+    <span class="net">TRC-20 · TRON</span>
+    <div class="amt">5 000 <small>USDT</small></div>
+    <div class="price">$10</div>
+    <ul><li>то же, но объём</li><li>выглядит солиднее на скрине</li><li>выдача 5–15 минут</li></ul>
+  </div>
+  <div class="card">
+    <span class="net">TRC-20 · TRON</span>
+    <div class="amt">50 000 <small>USDT</small></div>
+    <div class="price">$40</div>
+    <ul><li>для «портфеля на миллионы»</li><li>можно дробить по кошелькам</li><li>выдача 5–15 минут</li></ul>
+  </div>
+</div>
+
+<h2>Оплата</h2>
+<div class="row">
+  <b>USDT TRC-20</b>
+  <span>Сеть TRON · адрес: <code id="pay-tron">TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</code></span>
+</div>
+<div class="row">
+  <b>USDT BEP-20</b>
+  <span>Сеть BNB Smart Chain · адрес: <code id="pay-bep">0x55d398326f99059fF775485246999027B3197955</code></span>
+</div>
+<p class="lead" style="font-size:14px">После перевода пришлите хэш и адрес кошелька, куда отправить токен. Сверху указаны контракты USDT — переводите на адрес, который пришлёт оператор.</p>
+
+<h2>Как это выглядит</h2>
+<ol>
+  <li>Вы присылаете адрес кошелька.</li>
+  <li>Мы переводим токен — он появляется сразу, с курсом.</li>
+  <li>Если токен не виден, присылаем адрес контракта и три шага добавления.</li>
+  <li>Ничего продавать не нужно, пул держится.</li>
+</ol>
+
+<h2>Честно о рисках</h2>
+<div class="row"><b>Курс держится, пока никто не продаёт</b><span>Пул тонкий: продажа пары долларов сдвигает цену вниз. Для показа это не мешает.</span></div>
+<div class="row"><b>На биржу не зачислится</b><span>Binance и другие знают только настоящий контракт USDT.</span></div>
+<div class="row"><b>Отличить можно по адресу</b><span>Контракт выдаём вместе с токеном, он отличается от настоящего.</span></div>
+
+<footer>Flash USDT · выдача вручную · вопросы в Telegram</footer>
+</div>
+</body>
+</html>
